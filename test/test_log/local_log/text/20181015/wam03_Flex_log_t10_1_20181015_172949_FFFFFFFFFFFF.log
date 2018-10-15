@@ -1,0 +1,83 @@
+2018-10-15 17:29:51,677 root INFO t10 connexion on port com3 was successfully closed.
+2018-10-15 17:29:51,726 root INFO t10 connexion on port com3 was successfully opened.
+2018-10-15 17:29:51,726 root DEBUG <t10> TX command sent: 	<>
+2018-10-15 17:29:51,736 root DEBUG --------------- t10 RX start ---------------
+2018-10-15 17:29:51,836 root DEBUG   HypriotOS (Debian GNU/Linux 9) test-station ttyS0
+2018-10-15 17:29:53,836 root WARNING -->timeout: 2099 ms
+2018-10-15 17:29:53,836 root DEBUG   test-station login: 
+2018-10-15 17:29:53,836 root DEBUG --------------- t10 RX end ---------------
+2018-10-15 17:29:53,836 root INFO Prompt >> not found!!
+2018-10-15 17:29:53,836 root DEBUG <t10> TX command sent: 	<teststation>
+2018-10-15 17:29:53,957 root DEBUG --------------- t10 RX start ---------------
+2018-10-15 17:29:54,056 root DEBUG   teststation
+2018-10-15 17:29:54,056 root DEBUG -->prompt found
+2018-10-15 17:29:54,056 root DEBUG -->rc=0 NOT FOUND!!
+2018-10-15 17:29:54,056 root DEBUG   Password: 
+2018-10-15 17:29:54,056 root DEBUG --------------- t10 RX end ---------------
+2018-10-15 17:29:54,056 root DEBUG <t10> TX command sent: 	<test>
+2018-10-15 17:29:54,107 root DEBUG --------------- t10 RX start ---------------
+2018-10-15 17:29:54,407 root DEBUG   Last login: Sat May  5 09:36:17 CEST 2018 on ttyS0
+2018-10-15 17:29:54,407 root DEBUG   Linux test-station 4.14.34-hypriotos-v7+ #1 SMP Sun Apr 22 14:57:31 UTC 2018 armv7l
+2018-10-15 17:29:54,407 root DEBUG   HypriotOS (Debian GNU/Linux 9)
+2018-10-15 17:29:54,407 root DEBUG   The programs included with the Debian GNU/Linux system are free software;
+2018-10-15 17:29:54,407 root DEBUG   the exact distribution terms for each program are described in the
+2018-10-15 17:29:54,407 root DEBUG   individual files in /usr/share/doc/*/copyright.
+2018-10-15 17:29:54,407 root DEBUG   Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+2018-10-15 17:29:54,407 root DEBUG   permitted by applicable law.
+2018-10-15 17:29:58,207 root WARNING -->timeout: 4099 ms
+2018-10-15 17:29:58,207 root DEBUG   station name :
+2018-10-15 17:29:58,207 root DEBUG --------------- t10 RX end ---------------
+2018-10-15 17:29:58,207 root DEBUG <t10> TX command sent: 	<teststation>
+2018-10-15 17:29:58,327 root DEBUG --------------- t10 RX start ---------------
+2018-10-15 17:29:58,427 root DEBUG   teststation
+2018-10-15 17:30:02,427 root WARNING -->timeout: 4099 ms
+2018-10-15 17:30:02,427 root DEBUG   station version :
+2018-10-15 17:30:02,427 root DEBUG --------------- t10 RX end ---------------
+2018-10-15 17:30:02,427 root DEBUG <t10> TX command sent: 	<test>
+2018-10-15 17:30:02,476 root DEBUG --------------- t10 RX start ---------------
+2018-10-15 17:30:02,576 root DEBUG   test
+2018-10-15 17:30:02,976 root DEBUG   Error: No such object: eu.gcr.io/birota-cloud/teststation:test
+2018-10-15 17:30:03,276 root DEBUG   Unable to find image 'eu.gcr.io/birota-cloud/teststation:test' locally
+2018-10-15 17:30:04,376 root DEBUG   docker: Error response from daemon: Get https://eu.gcr.io/v2/: dial tcp: lookup eu.gcr.io on [::1]:53: read udp [::1]:39993->[::1]:53: read: connection refus
+2018-10-15 17:30:04,376 root DEBUG   HypriotOS (Debian GNU/Linux 9) test-station ttyS0
+2018-10-15 17:30:06,576 root WARNING -->timeout: 4099 ms
+2018-10-15 17:30:06,576 root DEBUG   test-station login: 
+2018-10-15 17:30:06,576 root DEBUG --------------- t10 RX end ---------------
+2018-10-15 17:30:06,576 root DEBUG <t10> TX command sent: 	<teststation>
+2018-10-15 17:30:06,697 root DEBUG --------------- t10 RX start ---------------
+2018-10-15 17:30:06,796 root DEBUG   teststation
+2018-10-15 17:30:06,796 root DEBUG -->prompt found
+2018-10-15 17:30:06,796 root DEBUG -->rc=0 NOT FOUND!!
+2018-10-15 17:30:06,796 root DEBUG   Password: 
+2018-10-15 17:30:06,796 root DEBUG --------------- t10 RX end ---------------
+2018-10-15 17:30:06,796 root DEBUG <t10> TX command sent: 	<test>
+2018-10-15 17:30:06,847 root DEBUG --------------- t10 RX start ---------------
+2018-10-15 17:30:07,047 root DEBUG   Last login: Sat May  5 09:44:26 CEST 2018 on ttyS0
+2018-10-15 17:30:07,147 root DEBUG   Linux test-station 4.14.34-hypriotos-v7+ #1 SMP Sun Apr 22 14:57:31 UTC 2018 armv7l
+2018-10-15 17:30:07,147 root DEBUG   HypriotOS (Debian GNU/Linux 9)
+2018-10-15 17:30:07,147 root DEBUG   The programs included with the Debian GNU/Linux system are free software;
+2018-10-15 17:30:07,147 root DEBUG   the exact distribution terms for each program are described in the
+2018-10-15 17:30:07,147 root DEBUG   individual files in /usr/share/doc/*/copyright.
+2018-10-15 17:30:07,147 root DEBUG   Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+2018-10-15 17:30:07,147 root DEBUG   permitted by applicable law.
+2018-10-15 17:30:10,947 root WARNING -->timeout: 4099 ms
+2018-10-15 17:30:10,947 root DEBUG   station name :
+2018-10-15 17:30:10,947 root DEBUG --------------- t10 RX end ---------------
+2018-10-15 17:30:10,947 root DEBUG <t10> TX command sent: 	<teststation>
+2018-10-15 17:30:11,067 root DEBUG --------------- t10 RX start ---------------
+2018-10-15 17:30:11,167 root DEBUG   teststation
+2018-10-15 17:30:15,167 root WARNING -->timeout: 4099 ms
+2018-10-15 17:30:15,167 root DEBUG   station version :
+2018-10-15 17:30:15,167 root DEBUG --------------- t10 RX end ---------------
+2018-10-15 17:30:15,167 root DEBUG <t10> TX command sent: 	<test>
+2018-10-15 17:30:15,217 root DEBUG --------------- t10 RX start ---------------
+2018-10-15 17:30:15,316 root DEBUG   test
+2018-10-15 17:30:15,616 root DEBUG   Error: No such object: eu.gcr.io/birota-cloud/teststation:test
+2018-10-15 17:30:16,016 root DEBUG   Unable to find image 'eu.gcr.io/birota-cloud/teststation:test' locally
+2018-10-15 17:30:16,016 root DEBUG   docker: Error response from daemon: Get https://eu.gcr.io/v2/: dial tcp: lookup eu.gcr.io on [::1]:53: read udp [::1]:47275->[::1]:53: read: connection refused.
+2018-10-15 17:30:17,116 root DEBUG   Se
+2018-10-15 17:30:17,116 root DEBUG   HypriotOS (Debian GNU/Linux 9) test-station ttyS0
+2018-10-15 17:30:19,316 root WARNING -->timeout: 4099 ms
+2018-10-15 17:30:19,316 root DEBUG   test-station login: 
+2018-10-15 17:30:19,316 root DEBUG --------------- t10 RX end ---------------
+2018-10-15 17:30:19,316 root WARNING -->timeout: 25480 ms

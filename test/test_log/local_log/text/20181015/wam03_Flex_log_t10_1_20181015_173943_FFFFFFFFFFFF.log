@@ -1,0 +1,68 @@
+2018-10-15 17:39:44,156 root INFO t10 connexion on port com3 was successfully closed.
+2018-10-15 17:39:44,207 root INFO t10 connexion on port com3 was successfully opened.
+2018-10-15 17:39:44,207 root DEBUG <t10> TX command sent: 	<>
+2018-10-15 17:39:44,217 root DEBUG --------------- t10 RX start ---------------
+2018-10-15 17:39:44,316 root DEBUG   HypriotOS (Debian GNU/Linux 9) test-station ttyS0
+2018-10-15 17:39:46,316 root WARNING -->timeout: 2099 ms
+2018-10-15 17:39:46,316 root DEBUG   test-station login: 
+2018-10-15 17:39:46,316 root DEBUG --------------- t10 RX end ---------------
+2018-10-15 17:39:46,316 root INFO Prompt >> not found!!
+2018-10-15 17:39:46,316 root DEBUG <t10> TX command sent: 	<teststation>
+2018-10-15 17:39:46,437 root DEBUG --------------- t10 RX start ---------------
+2018-10-15 17:39:46,536 root DEBUG   teststation
+2018-10-15 17:39:46,536 root DEBUG -->prompt found
+2018-10-15 17:39:46,536 root DEBUG -->rc=0 NOT FOUND!!
+2018-10-15 17:39:46,536 root DEBUG   Password: 
+2018-10-15 17:39:46,536 root DEBUG --------------- t10 RX end ---------------
+2018-10-15 17:39:46,536 root DEBUG <t10> TX command sent: 	<test>
+2018-10-15 17:39:46,587 root DEBUG --------------- t10 RX start ---------------
+2018-10-15 17:39:46,887 root DEBUG   Last login: Sat May  5 09:52:18 CEST 2018 on ttyS0
+2018-10-15 17:39:46,887 root DEBUG   Linux test-station 4.14.34-hypriotos-v7+ #1 SMP Sun Apr 22 14:57:31 UTC 2018 armv7l
+2018-10-15 17:39:46,887 root DEBUG   HypriotOS (Debian GNU/Linux 9)
+2018-10-15 17:39:46,887 root DEBUG   The programs included with the Debian GNU/Linux system are free software;
+2018-10-15 17:39:46,887 root DEBUG   the exact distribution terms for each program are described in the
+2018-10-15 17:39:46,887 root DEBUG   individual files in /usr/share/doc/*/copyright.
+2018-10-15 17:39:46,887 root DEBUG   Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+2018-10-15 17:39:46,887 root DEBUG   permitted by applicable law.
+2018-10-15 17:39:50,687 root WARNING -->timeout: 4099 ms
+2018-10-15 17:39:50,687 root DEBUG   station name :
+2018-10-15 17:39:50,687 root DEBUG --------------- t10 RX end ---------------
+2018-10-15 17:39:50,687 root INFO ======>>>>>>>>>>>>>> Login with station information
+2018-10-15 17:39:50,687 root DEBUG <t10> TX command sent: 	<zoov01-t10>
+2018-10-15 17:39:51,296 root DEBUG <t10> TX command sent: 	<0.3.3>
+2018-10-15 17:39:51,356 root DEBUG --------------- t10 RX start ---------------
+2018-10-15 17:39:51,457 root DEBUG   0.3.3
+2018-10-15 17:39:55,457 root WARNING -->timeout: 4100 ms
+2018-10-15 17:39:55,457 root DEBUG --------------- t10 RX end ---------------
+2018-10-15 17:39:55,457 root DEBUG <t10> TX command sent: 	<teststation>
+2018-10-15 17:39:55,576 root DEBUG --------------- t10 RX start ---------------
+2018-10-15 17:39:55,677 root DEBUG   teststation
+2018-10-15 17:39:55,677 root DEBUG   t10>teststation
+2018-10-15 17:39:55,677 root DEBUG   *** Unknown syntax: teststation 
+2018-10-15 17:39:59,677 root WARNING -->timeout: 4100 ms
+2018-10-15 17:39:59,677 root DEBUG   t10>
+2018-10-15 17:39:59,677 root DEBUG --------------- t10 RX end ---------------
+2018-10-15 17:39:59,677 root DEBUG <t10> TX command sent: 	<test>
+2018-10-15 17:39:59,726 root DEBUG --------------- t10 RX start ---------------
+2018-10-15 17:39:59,827 root DEBUG   test
+2018-10-15 17:39:59,827 root DEBUG   *** Unknown syntax: test 
+2018-10-15 17:40:03,827 root WARNING -->timeout: 4100 ms
+2018-10-15 17:40:03,827 root DEBUG   t10>
+2018-10-15 17:40:03,827 root DEBUG --------------- t10 RX end ---------------
+2018-10-15 17:40:03,827 root INFO ======>>>>>>>>>>>>>> Login with station information
+2018-10-15 17:40:03,827 root DEBUG <t10> TX command sent: 	<teststation>
+2018-10-15 17:40:03,957 root DEBUG --------------- t10 RX start ---------------
+2018-10-15 17:40:04,056 root DEBUG   teststation
+2018-10-15 17:40:04,056 root DEBUG   *** Unknown syntax: teststation 
+2018-10-15 17:40:08,056 root WARNING -->timeout: 4099 ms
+2018-10-15 17:40:08,056 root DEBUG   t10>
+2018-10-15 17:40:08,056 root DEBUG --------------- t10 RX end ---------------
+2018-10-15 17:40:08,056 root DEBUG <t10> TX command sent: 	<test>
+2018-10-15 17:40:08,107 root DEBUG --------------- t10 RX start ---------------
+2018-10-15 17:40:08,217 root DEBUG   test
+2018-10-15 17:40:08,217 root DEBUG   *** Unknown syntax: test 
+2018-10-15 17:40:12,116 root WARNING -->timeout: 4009 ms
+2018-10-15 17:40:12,116 root DEBUG   t10>
+2018-10-15 17:40:12,116 root DEBUG --------------- t10 RX end ---------------
+2018-10-15 17:40:12,116 root INFO ======>>>>>>>>>>>>>> Login with station information
+2018-10-15 17:40:12,116 root WARNING -->timeout: 25799 ms

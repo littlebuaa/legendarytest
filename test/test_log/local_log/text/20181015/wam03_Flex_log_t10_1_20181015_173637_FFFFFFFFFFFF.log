@@ -1,0 +1,63 @@
+2018-10-15 17:36:38,576 root INFO t10 connexion on port com3 was successfully closed.
+2018-10-15 17:36:38,636 root INFO t10 connexion on port com3 was successfully opened.
+2018-10-15 17:36:38,636 root DEBUG <t10> TX command sent: 	<>
+2018-10-15 17:36:38,647 root DEBUG --------------- t10 RX start ---------------
+2018-10-15 17:36:40,746 root WARNING -->timeout: 2099 ms
+2018-10-15 17:36:40,746 root DEBUG --------------- t10 RX end ---------------
+2018-10-15 17:36:40,746 root INFO Prompt >> not found!!
+2018-10-15 17:36:40,746 root DEBUG <t10> TX command sent: 	<teststation>
+2018-10-15 17:36:40,867 root DEBUG --------------- t10 RX start ---------------
+2018-10-15 17:36:40,967 root DEBUG   teststation
+2018-10-15 17:36:41,167 root DEBUG   Login incorrect
+2018-10-15 17:36:44,967 root WARNING -->timeout: 4099 ms
+2018-10-15 17:36:44,967 root DEBUG   test-station login: 
+2018-10-15 17:36:44,967 root DEBUG --------------- t10 RX end ---------------
+2018-10-15 17:36:44,967 root DEBUG <t10> TX command sent: 	<test>
+2018-10-15 17:36:45,016 root DEBUG --------------- t10 RX start ---------------
+2018-10-15 17:36:45,116 root DEBUG   test
+2018-10-15 17:36:49,116 root WARNING -->timeout: 4099 ms
+2018-10-15 17:36:49,116 root DEBUG   Password: 
+2018-10-15 17:36:49,116 root DEBUG --------------- t10 RX end ---------------
+2018-10-15 17:36:49,116 root INFO ======>>>>>>>>>>>>>> Login with station information
+2018-10-15 17:36:49,116 root DEBUG <t10> TX command sent: 	<teststation>
+2018-10-15 17:36:49,236 root DEBUG --------------- t10 RX start ---------------
+2018-10-15 17:36:52,336 root DEBUG   Login incorrect
+2018-10-15 17:36:52,336 root DEBUG   Maximum number of tries exceeded (5)
+2018-10-15 17:36:53,336 root WARNING -->timeout: 4099 ms
+2018-10-15 17:36:53,336 root DEBUG --------------- t10 RX end ---------------
+2018-10-15 17:36:53,336 root DEBUG <t10> TX command sent: 	<test>
+2018-10-15 17:36:53,387 root DEBUG --------------- t10 RX start ---------------
+2018-10-15 17:36:53,687 root DEBUG   HypriotOS (Debian GNU/Linux 9) test-station ttyS0
+2018-10-15 17:36:57,486 root WARNING -->timeout: 4099 ms
+2018-10-15 17:36:57,486 root DEBUG   test-station login: 
+2018-10-15 17:36:57,486 root DEBUG --------------- t10 RX end ---------------
+2018-10-15 17:36:57,486 root INFO ======>>>>>>>>>>>>>> Login with station information
+2018-10-15 17:36:57,486 root DEBUG <t10> TX command sent: 	<teststation>
+2018-10-15 17:36:57,616 root DEBUG --------------- t10 RX start ---------------
+2018-10-15 17:36:57,717 root DEBUG   teststation
+2018-10-15 17:36:57,717 root DEBUG -->prompt found
+2018-10-15 17:36:57,717 root DEBUG -->rc=0 NOT FOUND!!
+2018-10-15 17:36:57,717 root DEBUG   Password: 
+2018-10-15 17:36:57,717 root DEBUG --------------- t10 RX end ---------------
+2018-10-15 17:36:57,717 root DEBUG <t10> TX command sent: 	<test>
+2018-10-15 17:36:57,766 root DEBUG --------------- t10 RX start ---------------
+2018-10-15 17:36:57,967 root DEBUG   Last login: Sat May  5 09:49:06 CEST 2018 on ttyS0
+2018-10-15 17:36:58,067 root DEBUG   Linux test-station 4.14.34-hypriotos-v7+ #1 SMP Sun Apr 22 14:57:31 UTC 2018 armv7l
+2018-10-15 17:36:58,067 root DEBUG   HypriotOS (Debian GNU/Linux 9)
+2018-10-15 17:36:58,067 root DEBUG   The programs included with the Debian GNU/Linux system are free software;
+2018-10-15 17:36:58,067 root DEBUG   the exact distribution terms for each program are described in the
+2018-10-15 17:36:58,067 root DEBUG   individual files in /usr/share/doc/*/copyright.
+2018-10-15 17:36:58,067 root DEBUG   Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+2018-10-15 17:36:58,067 root DEBUG   permitted by applicable law.
+2018-10-15 17:37:01,867 root WARNING -->timeout: 4100 ms
+2018-10-15 17:37:01,867 root DEBUG   station name :
+2018-10-15 17:37:01,867 root DEBUG --------------- t10 RX end ---------------
+2018-10-15 17:37:01,867 root INFO ======>>>>>>>>>>>>>> Login with station information
+2018-10-15 17:37:01,867 root DEBUG <t10> TX command sent: 	<t10>
+2018-10-15 17:37:02,407 root DEBUG <t10> TX command sent: 	<0.3.3>
+2018-10-15 17:37:02,467 root DEBUG --------------- t10 RX start ---------------
+2018-10-15 17:37:02,567 root DEBUG   0.3.3
+2018-10-15 17:37:02,967 root DEBUG   Error: No such object: eu.gcr.io/birota-cloud/t10:0.3.3
+2018-10-15 17:37:02,967 root DEBUG -->prompt found
+2018-10-15 17:37:02,967 root DEBUG -->rc=0 NOT FOUND!!
+2018-10-15 17:37:02,967 root DEBUG --------------- t10 RX end ---------------

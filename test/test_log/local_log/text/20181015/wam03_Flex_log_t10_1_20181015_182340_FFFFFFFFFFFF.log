@@ -1,0 +1,7 @@
+2018-10-15 18:23:41,415 root INFO t10 connexion on port com3 was successfully closed.
+2018-10-15 18:23:41,465 root INFO t10 connexion on port com3 was successfully opened.
+2018-10-15 18:23:41,465 root DEBUG <t10> TX command sent: 	<>
+2018-10-15 18:23:41,476 root DEBUG --------------- t10 RX start ---------------
+2018-10-15 18:23:41,575 root DEBUG   HypriotOS (Debian GNU/Linux 9) test-station ttyS0
+2018-10-15 18:23:43,575 root WARNING -->timeout: 2099 ms
+2018-10-15 18:23:43,575 root DEBUG   test-station login: 

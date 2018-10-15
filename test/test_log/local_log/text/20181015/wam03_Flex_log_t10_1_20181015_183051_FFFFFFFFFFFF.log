@@ -1,0 +1,15 @@
+2018-10-15 18:30:52,437 root INFO t10 connexion on port com3 was successfully closed.
+2018-10-15 18:30:52,486 root INFO t10 connexion on port com3 was successfully opened.
+2018-10-15 18:30:52,486 root DEBUG <t10> TX command sent: 	<>
+2018-10-15 18:30:52,496 root DEBUG --------------- t10 RX start ---------------
+2018-10-15 18:30:52,596 root DEBUG   t10>
+2018-10-15 18:30:52,596 root DEBUG ==>> prompt found, but no 'rc =0'
+2018-10-15 18:30:52,596 root DEBUG --------------- t10 RX end ---------------
+2018-10-15 18:30:52,596 root DEBUG <t10> TX command sent: 	<version>
+2018-10-15 18:30:52,677 root DEBUG --------------- t10 RX start ---------------
+2018-10-15 18:30:52,776 root DEBUG   version
+2018-10-15 18:30:52,776 root DEBUG   sha256=a98f70ee9a9a901b39d3cb162b253b2845605a7db04327c8cfd61bc8e0787af6
+2018-10-15 18:30:52,776 root DEBUG   rc=0
+2018-10-15 18:30:52,776 root DEBUG   t10>
+2018-10-15 18:30:52,776 root DEBUG ==>> prompt found, rc =0
+2018-10-15 18:30:52,776 root DEBUG --------------- t10 RX end ---------------

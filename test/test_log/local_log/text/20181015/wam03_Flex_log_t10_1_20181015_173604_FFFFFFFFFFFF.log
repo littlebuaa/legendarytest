@@ -1,0 +1,48 @@
+2018-10-15 17:36:05,677 root INFO t10 connexion on port com3 was successfully closed.
+2018-10-15 17:36:05,726 root INFO t10 connexion on port com3 was successfully opened.
+2018-10-15 17:36:05,726 root DEBUG <t10> TX command sent: 	<>
+2018-10-15 17:36:05,746 root DEBUG --------------- t10 RX start ---------------
+2018-10-15 17:36:07,847 root WARNING -->timeout: 2100 ms
+2018-10-15 17:36:07,847 root DEBUG   Password: 
+2018-10-15 17:36:07,847 root DEBUG --------------- t10 RX end ---------------
+2018-10-15 17:36:07,847 root INFO Prompt >> not found!!
+2018-10-15 17:36:07,847 root DEBUG <t10> TX command sent: 	<teststation>
+2018-10-15 17:36:07,967 root DEBUG --------------- t10 RX start ---------------
+2018-10-15 17:36:11,266 root DEBUG   Login incorrect
+2018-10-15 17:36:12,067 root WARNING -->timeout: 4100 ms
+2018-10-15 17:36:12,067 root DEBUG   test-station login: 
+2018-10-15 17:36:12,067 root DEBUG --------------- t10 RX end ---------------
+2018-10-15 17:36:12,067 root DEBUG <t10> TX command sent: 	<test>
+2018-10-15 17:36:12,116 root DEBUG --------------- t10 RX start ---------------
+2018-10-15 17:36:12,217 root DEBUG   test
+2018-10-15 17:36:16,217 root WARNING -->timeout: 4100 ms
+2018-10-15 17:36:16,217 root DEBUG   Password: 
+2018-10-15 17:36:16,217 root DEBUG --------------- t10 RX end ---------------
+2018-10-15 17:36:16,217 root INFO ======>>>>>>>>>>>>>> Login with station information
+2018-10-15 17:36:16,217 root DEBUG <t10> TX command sent: 	<teststation>
+2018-10-15 17:36:16,336 root DEBUG --------------- t10 RX start ---------------
+2018-10-15 17:36:19,336 root DEBUG   Login incorrect
+2018-10-15 17:36:20,437 root WARNING -->timeout: 4100 ms
+2018-10-15 17:36:20,437 root DEBUG   test-station login: 
+2018-10-15 17:36:20,437 root DEBUG --------------- t10 RX end ---------------
+2018-10-15 17:36:20,437 root DEBUG <t10> TX command sent: 	<test>
+2018-10-15 17:36:20,486 root DEBUG --------------- t10 RX start ---------------
+2018-10-15 17:36:20,587 root DEBUG   test
+2018-10-15 17:36:24,587 root WARNING -->timeout: 4100 ms
+2018-10-15 17:36:24,587 root DEBUG   Password: 
+2018-10-15 17:36:24,587 root DEBUG --------------- t10 RX end ---------------
+2018-10-15 17:36:24,587 root INFO ======>>>>>>>>>>>>>> Login with station information
+2018-10-15 17:36:24,587 root DEBUG <t10> TX command sent: 	<teststation>
+2018-10-15 17:36:24,707 root DEBUG --------------- t10 RX start ---------------
+2018-10-15 17:36:27,807 root DEBUG   Login incorrect
+2018-10-15 17:36:28,807 root WARNING -->timeout: 4100 ms
+2018-10-15 17:36:28,807 root DEBUG   test-station login: 
+2018-10-15 17:36:28,807 root DEBUG --------------- t10 RX end ---------------
+2018-10-15 17:36:28,807 root DEBUG <t10> TX command sent: 	<test>
+2018-10-15 17:36:28,856 root DEBUG --------------- t10 RX start ---------------
+2018-10-15 17:36:28,957 root DEBUG   test
+2018-10-15 17:36:32,957 root WARNING -->timeout: 4100 ms
+2018-10-15 17:36:32,957 root DEBUG   Password: 
+2018-10-15 17:36:32,957 root DEBUG --------------- t10 RX end ---------------
+2018-10-15 17:36:32,957 root INFO ======>>>>>>>>>>>>>> Login with station information
+2018-10-15 17:36:32,957 root WARNING -->timeout: 25109 ms

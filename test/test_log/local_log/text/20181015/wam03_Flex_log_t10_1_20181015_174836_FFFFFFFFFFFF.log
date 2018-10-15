@@ -1,0 +1,44 @@
+2018-10-15 17:48:38,127 root INFO t10 connexion on port com3 was successfully closed.
+2018-10-15 17:48:38,177 root INFO t10 connexion on port com3 was successfully opened.
+2018-10-15 17:48:38,177 root DEBUG <t10> TX command sent: 	<>
+2018-10-15 17:48:38,187 root DEBUG --------------- t10 RX start ---------------
+2018-10-15 17:48:38,287 root DEBUG   HypriotOS (Debian GNU/Linux 9) test-station ttyS0
+2018-10-15 17:48:40,287 root WARNING -->timeout: 2100 ms
+2018-10-15 17:48:40,287 root DEBUG   test-station login: 
+2018-10-15 17:48:40,287 root DEBUG --------------- t10 RX end ---------------
+2018-10-15 17:48:40,287 root INFO Prompt >> not found!!
+2018-10-15 17:48:40,287 root DEBUG <t10> TX command sent: 	<>
+2018-10-15 17:48:40,296 root DEBUG --------------- t10 RX start ---------------
+2018-10-15 17:48:40,396 root DEBUG   HypriotOS (Debian GNU/Linux 9) test-station ttyS0
+2018-10-15 17:48:45,396 root WARNING -->timeout: 5099 ms
+2018-10-15 17:48:45,396 root DEBUG   test-station login: 
+2018-10-15 17:48:45,396 root DEBUG --------------- t10 RX end ---------------
+2018-10-15 17:48:45,396 root DEBUG <t10> TX command sent: 	<teststation>
+2018-10-15 17:48:45,516 root DEBUG --------------- t10 RX start ---------------
+2018-10-15 17:48:45,616 root DEBUG   teststation
+2018-10-15 17:48:45,616 root DEBUG -->prompt found
+2018-10-15 17:48:45,616 root DEBUG -->rc=0 NOT FOUND!!
+2018-10-15 17:48:45,616 root DEBUG   Password: 
+2018-10-15 17:48:45,616 root DEBUG --------------- t10 RX end ---------------
+2018-10-15 17:48:45,616 root DEBUG <t10> TX command sent: 	<test>
+2018-10-15 17:48:45,667 root DEBUG --------------- t10 RX start ---------------
+2018-10-15 17:48:45,967 root DEBUG   Last login: Sat May  5 09:54:19 CEST 2018 on ttyS0
+2018-10-15 17:48:45,967 root DEBUG   Linux test-station 4.14.34-hypriotos-v7+ #1 SMP Sun Apr 22 14:57:31 UTC 2018 armv7l
+2018-10-15 17:48:45,967 root DEBUG   HypriotOS (Debian GNU/Linux 9)
+2018-10-15 17:48:45,967 root DEBUG   The programs included with the Debian GNU/Linux system are free software;
+2018-10-15 17:48:45,967 root DEBUG   the exact distribution terms for each program are described in the
+2018-10-15 17:48:45,967 root DEBUG   individual files in /usr/share/doc/*/copyright.
+2018-10-15 17:48:45,967 root DEBUG   Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+2018-10-15 17:48:45,967 root DEBUG   permitted by applicable law.
+2018-10-15 17:48:46,067 root DEBUG -->prompt found
+2018-10-15 17:48:46,067 root DEBUG -->rc=0 NOT FOUND!!
+2018-10-15 17:48:46,067 root DEBUG   station name :
+2018-10-15 17:48:46,067 root DEBUG --------------- t10 RX end ---------------
+2018-10-15 17:48:46,067 root DEBUG <t10> TX command sent: 	<zoov01-t10>
+2018-10-15 17:48:46,677 root DEBUG <t10> TX command sent: 	<0.3.3>
+2018-10-15 17:48:46,736 root DEBUG --------------- t10 RX start ---------------
+2018-10-15 17:48:46,836 root DEBUG   0.3.3
+2018-10-15 17:48:49,336 root DEBUG -->prompt found
+2018-10-15 17:48:49,336 root DEBUG -->rc=0 NOT FOUND!!
+2018-10-15 17:48:49,336 root DEBUG   t10>
+2018-10-15 17:48:49,336 root DEBUG --------------- t10 RX end ---------------
