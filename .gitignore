@@ -7,5 +7,6 @@
 #binary file
 *.tar.gz
 
+*.ini
 ./test/*
 .vscode/*
