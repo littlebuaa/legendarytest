@@ -10,6 +10,7 @@ from .BKMeter import BKMeter
 from .DUT import DUT,CommandResult
 from .FrequencyMeter import Freq_Meter
 from .Fluke import Fluke
+from .Zoovstation import Zoovstation
 
 
 __all__ = [
@@ -19,5 +20,6 @@ __all__ = [
     'Freq_Meter',
     'DUT',
     'Fluke',
-    'TelnetDevice'
+    'TelnetDevice',
+    'Zoovstation',
 ]
