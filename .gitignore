@@ -8,5 +8,5 @@
 *.tar.gz
 
 *.ini
-./test/
+test/
 .vscode/
