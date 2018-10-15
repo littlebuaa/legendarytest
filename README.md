@@ -11,6 +11,6 @@ It contains:
 
 ============================================================================
 
-use `python setup.py sdist` to generate the tar.gz packge.
+use `python setup.py sdist` to generate the tar.gz packge  
 use `python setup.py sdist clean` to do it properly
 
