@@ -1,8 +1,0 @@
-2018-10-15 18:22:17,105 root INFO t10 connexion on port com3 was successfully closed.
-2018-10-15 18:22:17,155 root INFO t10 connexion on port com3 was successfully opened.
-2018-10-15 18:22:17,155 root DEBUG <t10> TX command sent: 	<>
-2018-10-15 18:22:17,166 root DEBUG --------------- t10 RX start ---------------
-2018-10-15 18:22:17,265 root DEBUG   t10>
-2018-10-15 18:22:17,265 root DEBUG ==>> prompt found, but no 'rc =0'
-2018-10-15 18:22:17,265 root DEBUG --------------- t10 RX end ---------------
-2018-10-15 18:22:17,265 root INFO Prompt >> Found!!
