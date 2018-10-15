@@ -6,3 +6,6 @@
 
 #binary file
 *.tar.gz
+
+./test/*
+.vscode/*
