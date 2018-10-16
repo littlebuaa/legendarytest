@@ -83,7 +83,7 @@ def question_timeout(question,timeout_sec):
     times = 100
     loop = timeout_sec*times
     while(loop>=0):
-        line = question + "Timeout: %s seconds:  %s"%(str(int(loop/times)),keyboard_str)
+        line = question  + " -- Timeout: %s seconds:  %s"%(str(int(loop/times)),keyboard_str)
         sys.stdout.write(line)
         sys.stdout.flush()
         time.sleep(1/times) #wait for 1/times second
@@ -103,8 +103,8 @@ def question_timeout(question,timeout_sec):
             loop = loop -1
             continue
         else:
-            print("")
-            key_timeout = False
+            print(keyboard_str)
+            key_timeout = True
             break
     print()
     return(key_timeout,keyboard_str)
