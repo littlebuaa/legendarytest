@@ -7,7 +7,7 @@ class CheckLowPowerLink(Test):
     def __init__(self, dut):
         super().__init__(dut, "Check Low Power Link flag")
 
-   def test(self): 
+    def test(self):
         if locale.getdefaultlocale()[0] == 'zh_CN':
             colorprint("请准备开始测试")
         else:

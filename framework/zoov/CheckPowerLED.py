@@ -28,7 +28,7 @@ class CheckPowerLED(Test):
                 self.logger.info( "CSVFILE check_power_led ok ok pass")
                 flag = True
 
-        self.dut.execute_command("power_led on off", 4000)
+        self.dut.execute_command("power_led off", 4000)
         if not flag:
             self.logger.info( "CSVFILE check_power_led ok ng fail")
         return flag
