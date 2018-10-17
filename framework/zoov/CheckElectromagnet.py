@@ -11,16 +11,14 @@ class CheckElectromagnet(Test):
         if locale.getdefaultlocale()[0] == 'zh_CN':
             colorprint("请准备开始测试")
         else:
-            colorprint("Ready to do the electromagnet check test? Go! 准备好测试了吗？","YELLOW")
-        input()
-
+            colorprint("Ready to do the electromagnet check test? Go!","YELLOW")
         flag = False
 
 
         # Turn on electromagnet 
         res = CommandResult.parse(self.dut.execute_command("electromagnet on", 4000)[1])
         if res.rc == 0:
-            colorprint("Measure the voltage of Electromagnet OUTPUT. 准备好测试了吗？","YELLOW")
+            colorprint("Measure the voltage of Electromagnet OUTPUT","YELLOW")
             input()
             msg = "Is voltage around 24V? Yes/No? " 
             reponse = question_timeout(msg,15)

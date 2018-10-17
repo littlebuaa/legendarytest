@@ -12,7 +12,6 @@ class CheckPowerLED(Test):
             colorprint("请准备开始测试")
         else:
             colorprint("Ready to do the POWER LED check test? Go! 准备好测试了吗？","YELLOW")
-        input()
 
         flag = False
 
@@ -20,7 +19,7 @@ class CheckPowerLED(Test):
         # Turn on light 
         res = CommandResult.parse(self.dut.execute_command("power_led on", 4000)[1])
         if res.rc == 0:
-            colorprint("check the RED POWER LED is on or off 准备好测试了吗？","YELLOW")
+            colorprint("check the RED POWER LED is on or off!","YELLOW")
             input()
             msg = "Did you see the POWER LED on? Yes/No? " 
             reponse = question_timeout(msg,15)

@@ -11,4 +11,5 @@ class ExecuteCommand(Test):
             self.logger.info("CSVFILE " + self.name.replace(" ", "_") + " ok fail fail")
             return False
         self.logger.info("CSVFILE " + self.name.replace(" ", "_") + " ok ok pass")
+        input("--------------- Reboot the BOARD ---------!!!!")
         return True

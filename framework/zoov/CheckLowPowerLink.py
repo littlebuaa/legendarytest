@@ -11,8 +11,7 @@ class CheckLowPowerLink(Test):
         if locale.getdefaultlocale()[0] == 'zh_CN':
             colorprint("请准备开始测试")
         else:
-            colorprint("Ready to do the Low power link test? Go! 准备好测试了吗？","YELLOW")
-        input()
+            colorprint("Ready to do the Low power link test? Go？","YELLOW")
 
         flag = False
 
@@ -20,14 +19,14 @@ class CheckLowPowerLink(Test):
         # Turn on light 
         res = CommandResult.parse(self.dut.execute_command("low_power_check on", 4000)[1])
         if res.rc == 0:
-            colorprint("Measure the voltage of low power link pin!!! 准备好测试了吗？","YELLOW")
+            colorprint("Measure the voltage of low power link pin!!!","YELLOW")
             input()
-            msg = "Is low power flag on? Yes/No? " 
+            msg = "Is low power flag PIN around 3V? Yes/No? " 
             reponse = question_timeout(msg,15)
             if reponse[0] and (reponse[1].strip().lower()[0] == "y"):
                 self.dut.execute_command("low_power_check off", 4000)
-                msg = "Is low power flag off? Yes/No? " 
-                reponse = question_timeout(msg,15)
+                msg = "Is low power flag PIN falls to 0V? Yes/No? " 
+                reponse = question_timeout(msg,20)
                 if reponse[0] and (reponse[1].strip().lower()[0] == "y"):
                     self.logger.info( "CSVFILE check_low_power_link ok ok pass")
                     return True

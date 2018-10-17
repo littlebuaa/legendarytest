@@ -13,9 +13,6 @@ class CheckSound(Test):
             colorprint("请准备开始测试")
         else:
             colorprint("please ready to listen to the beep sound, press Enter to Begin the test...","YELLOW")
-        os.system("pause")
-
-        time.sleep(1)
 
         rc, text = self.dut.execute_command("play_sound", 10000)
         if rc == 0:

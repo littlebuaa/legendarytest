@@ -1,6 +1,6 @@
 from framework.common.testing import Test
 from framework.tools.device import CommandResult
-from framework.tools.utils import colorprint
+from framework.tools.utils import colorprint,question_timeout
 import os
 import locale
 
