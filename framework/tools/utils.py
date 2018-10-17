@@ -78,7 +78,7 @@ def question_timeout(question,timeout_sec):
         output:
     - answer: input from keyboard
     - timeout: If no answer with timeout then'''
-    key_timeout = True
+    no_timeout = False
     keyboard_str = ""
     times = 100
     loop = timeout_sec*times
@@ -104,10 +104,10 @@ def question_timeout(question,timeout_sec):
             continue
         else:
             print(keyboard_str)
-            key_timeout = True
+            no_timeout = True
             break
     print()
-    return(key_timeout,keyboard_str)
+    return(no_timeout,keyboard_str)
 
 ## to share MAC label as global variable outside this file 
 
