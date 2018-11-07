@@ -116,12 +116,27 @@ def scan_mac(msg):
     #scan mac from mac label
     timeout = 180
     colorprint(msg)
-    timeout,mac_input = question_timeout("",timeout)#timeout 180 seconds if no input
-    if timeout:
+    no_timeout,mac_input = question_timeout("",timeout)#timeout 180 seconds if no input
+    if not no_timeout:
         mac_label = "mac_none" # default value for bad input
         return(mac_label)
     else:
         return(check_mac_valid(mac_input))
+
+def scan_serial_id(msg):
+    #scan mac from mac label
+    timeout = 180
+    colorprint(msg)
+    no_timeout,mac_input = question_timeout("",timeout)#timeout 180 seconds if no input
+    p = re.compile('(?P<serial_id>1[0-9]{5})')
+    m = p.search(mac_input)
+    print(m)
+    serial_id = m.group('serial_id') if m != None else -1
+    if not no_timeout:
+        mac_label = "mac_none" # default value for bad input
+        return(mac_label)
+    else:
+        return(serial_id)
 
 
 def check_mac_valid(mac_input):
