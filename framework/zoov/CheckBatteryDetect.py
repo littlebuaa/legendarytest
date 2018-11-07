@@ -1,6 +1,6 @@
 from framework.common.testing import Test
 from framework.tools.device import CommandResult
-from framework.tools.utils import colorprint
+from framework.tools.utils import colorprint, question_timeout
 import os
 import locale
 
@@ -14,10 +14,10 @@ class CheckBatteryDetect(Test):
         if locale.getdefaultlocale()[0] == 'zh_CN':
             colorprint("请准备开始测试")
         else:
-            colorprint("Battery Detect Test, please put the personal battery on the holder, Then press ENTER...","YELLOW")
+            colorprint("Battery Detect Test, please put the personal battery on the holder, or Turn on 36V power supply, Then press ENTER...","YELLOW")
 
         flag = True
-        msg = "Is 36v battery well mounted?? " 
+        msg = "Is 36v battery well mounted Yes/No ??" 
         reponse = question_timeout(msg,30)
         if reponse[0] and (reponse[1].strip().lower()[0] == "y"):
             self.logger.info( "CSVFILE Battery_detect ok ok pass")

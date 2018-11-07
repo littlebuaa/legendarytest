@@ -21,7 +21,7 @@ class CheckLight(Test):
         if res.rc == 0:
             colorprint("Measure the voltage of Front and Rear light? or check the light is on or off？","YELLOW")
             input()
-            msg = "Did you see the light or is voltage around 6V? Yes/No? " 
+            msg = "Did you see the light or is voltage around 6V? Or is the Front and Rear Light is ON?? Yes/No? " 
             reponse = question_timeout(msg,20)
             if reponse[0] and (reponse[1].strip().lower()[0] == "y"):
                 self.logger.info( "CSVFILE check_light ok ok pass")

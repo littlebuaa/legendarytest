@@ -14,13 +14,13 @@ class CheckElectromagnet(Test):
             colorprint("Ready to do the electromagnet check test? Go!","YELLOW")
         flag = False
 
-
+        colorprint("Check if the Magnet of the stack on the right side works. ","YELLOW")
+        input()
         # Turn on electromagnet 
         res = CommandResult.parse(self.dut.execute_command("electromagnet on", 4000)[1])
         if res.rc == 0:
-            colorprint("Measure the voltage of Electromagnet OUTPUT","YELLOW")
-            input()
-            msg = "Is voltage around 24V? Yes/No? " 
+            colorprint("Measure the voltage of Electromagnet OUTPUT, Or check the status of the Magnet","YELLOW")
+            msg = "Is voltage around 24V? Does the magnet lose its attraction?  Yes/No? " 
             reponse = question_timeout(msg,15)
             if reponse[0] and (reponse[1].strip().lower()[0] == "y"):
                 self.logger.info( "CSVFILE check_electromagnet ok ok pass")
