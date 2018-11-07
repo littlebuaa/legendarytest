@@ -11,7 +11,7 @@ import os
 
 class Zoovstation(UARTDevice):
     """Device under test, i.e. the product to be tested."""
-    def __init__(self, port, baudrate=115200):
+    def __init__(self, port, serial_id="XXXX",baudrate=115200):
         super().__init__(port, baudrate, 0.1)
         station_name = configget("TEST_STATION", "station_name").lower()
         self.name = station_name
@@ -21,6 +21,7 @@ class Zoovstation(UARTDevice):
         self.__failure_reason = None # Reason of failure if __pass = False
         self.__logname = ""
         self.__test = True
+        self.serial_id = serial_id
 
     def create_log_file(self, station_number):
         """Create and open a log file."""
