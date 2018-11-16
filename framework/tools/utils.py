@@ -2,12 +2,14 @@
 # -*- coding:utf-8 -*-
 
 
-from colorama import init
+from colorama import init as colorama_init
 from colorama import Fore, Back, Style
 import time,sys
 import re
 import sys
 import logging
+from .config import configget
+import locale
 
 pass_art = """
  .----------------.  .----------------.  .----------------.  .----------------. 
@@ -54,11 +56,27 @@ fail_ = """
 ##       ##     ##   ####   ######## 
 """
 
+'''
+   ENCODING defines the message showed to OP
+   0  ===>  English
+   1  ===>  Chinese Simplified  简体中文
+   2  ===>  Chinese Traditional 繁體中文
+'''
+# global ENCODING
+ENCODING = 0
 
 
 def init_test():
-    init()
+    global ENCODING
+    colorama_init()
     time_begin = time.time()
+    locale_set = locale.getdefaultlocale()
+    if "zh_CN" in locale_set:
+        ENCODING = 1
+        print("程序提示语言为简体中文")
+    elif "zh_TW" in locale_set or "cp950" in locale_set:
+        ENCODING = 2
+        print("程式提示語言為繁體中文")
     return time_begin
 
 
