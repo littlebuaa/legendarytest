@@ -1,6 +1,6 @@
 from framework.common.testing import Test
 from framework.tools.device import CommandResult
-from framework.tools.utils import colorprint, question_timeout
+from framework.tools.utils import colorprint, question_timeout, op_messager, ENCODING
 import os
 import locale
 
@@ -11,19 +11,20 @@ class CheckBatteryDetect(Test):
         super().__init__(dut, "Check Battery Detect")
 
     def test(self):
-        if locale.getdefaultlocale()[0] == 'zh_CN':
-            colorprint("请准备开始测试")
+        if ENCODING == 1 or ENCODING == 2:
+            op_messager("動力電池檢測，請將動力電池裝在車上，或者啟動36V電源，然後按Enter鍵")
         else:
-            colorprint("Battery Detect Test, please put the personal battery on the holder, or Turn on 36V power supply, Then press ENTER...","YELLOW")
-
+            op_messager("Battery Detect Test, please put the personal battery on the holder, or Turn on 36V power supply, Then press ENTER...")
         flag = True
-        msg = "Is 36v battery well mounted Yes/No ??" 
-        reponse = question_timeout(msg,30)
-        if reponse[0] and (reponse[1].strip().lower()[0] == "y"):
+        input()
+
+        res = CommandResult.parse(self.dut.execute_command("batt_detect", 5000)[1])
+        if res.rc == 0 and res.data["value"] == "0":
             self.logger.info( "CSVFILE Battery_detect ok ok pass")
         else:
-            self.logger.info( "CSVFILE Battery_detect ok fail fail")
+            self.logger.info( "CSVFILE Battery_detect ok ng fail")
             flag = False
 
-        colorprint("Test finished, please remove the battery, Then press ENTER...","YELLOW")
+        colorprint("Test finished, please remove the battery, Then press ENTER...","GREEN")
+        input()
         return flag

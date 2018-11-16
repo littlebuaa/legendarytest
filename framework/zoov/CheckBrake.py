@@ -1,19 +1,32 @@
 from framework.common.testing import Test
 from framework.tools.device import CommandResult
-from framework.tools.utils import colorprint
+from framework.tools.utils import colorprint, op_messager, ENCODING
 import locale,os
 
 class CheckBrake(Test):
     def __init__(self, dut):
         super().__init__(dut, "Check Brake Detect")
-
-    def test(self): 
-        if locale.getdefaultlocale()[0] == 'zh_CN':
-            colorprint("请准备开始测试")
+        if ENCODING == 1 or ENCODING == 2:
+            # Language setting
+            self.message = (
+                "煞車檢測，準備好後按Enter鍵繼續",
+                "請捏緊左邊的前煞，同時按Enter鍵",
+                "請捏緊右邊的後煞，同時按Enter鍵",
+                "測試結束，下一項。。。"
+            )
         else:
-            colorprint("Ready to do the Brake DETECT test? Go!","YELLOW")
-        flag = True
+            self.message = (
+                "Ready to do the Brake DETECT test? Go!",
+                "Apply Only the Left Brake, and at the same time, press ENTER...",
+                "Apply Only the Left Brake, and at the same time, Press ENTER!!!",
+                "Test finished, please remove the battery, Then press ENTER..."
+            )
 
+    def test(self):
+        flag = True
+        message = self.message
+        colorprint(message[0],"YELLOW")
+        input()
 
         # No Brake OFF, 
         res = CommandResult.parse(self.dut.execute_command("brake_check", 5000)[1])
@@ -25,10 +38,9 @@ class CheckBrake(Test):
             self.logger.info( "CSVFILE right_brake_off ok ng fail")
             flag = False
         
-        colorprint("Apply Only the Left Brake, and Press Enter!!!","YELLOW")
+        # Left Brake ON,
+        op_messager(message[1])
         input()
-
-        # Left Brake ON, 
         res = CommandResult.parse(self.dut.execute_command("brake_check", 5000)[1])
         if res.rc == 0 and res.data["left_brake"] == "1" and res.data["right_brake"] == "0":
             self.logger.info( "CSVFILE left_brake_on ok ok pass")
@@ -36,11 +48,11 @@ class CheckBrake(Test):
             self.logger.info( "CSVFILE left_brake_on ok ng fail")
             flag = False
 
-        
 
         # Right Brake ON, 
-        colorprint("Apply Right Brake Now, and Press Enter!!!","YELLOW")
+        op_messager(message[2])
         input()
+
         res = CommandResult.parse(self.dut.execute_command("brake_check", 5000)[1])
         if res.rc == 0 and res.data["left_brake"] == "0" and res.data["right_brake"] == "1":
             self.logger.info( "CSVFILE right_brake_on ok ok pass")
@@ -48,4 +60,6 @@ class CheckBrake(Test):
             self.logger.info( "CSVFILE right_brake_on ok ng fail")
             flag = False
 
+
+        colorprint(message[3],"GREEN")
         return flag
