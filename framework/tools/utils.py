@@ -193,3 +193,16 @@ def check_value_in(target,source,separator):
             key_exist = True
             break
     return key_exist
+
+def op_messager(message, color="CYAN", type = 0):
+    '''print message to Operator'''
+    msg = ''
+    line_ = 70
+    loop = int(len(message)/line_)
+    for n in range(0, int(len(message)/line_)+1):
+        trunc_text = message[n*line_:(n+1)*line_]
+        msg += '#' + '{:^78}'.format(trunc_text) + '#\n'
+    print('{:#<80}'.format(''))
+    print()
+    colorprint(msg[0:-1],"BLACK",color)
+    print('{:#<80}'.format(''))
