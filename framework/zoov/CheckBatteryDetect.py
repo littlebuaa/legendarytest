@@ -25,6 +25,6 @@ class CheckBatteryDetect(Test):
             self.logger.info( "CSVFILE Battery_detect ok ng fail")
             flag = False
 
-        colorprint("Test finished, please remove the battery, Then press ENTER...","GREEN")
+        colorprint("Test finished, Press ENTER...","GREEN")
         input()
         return flag

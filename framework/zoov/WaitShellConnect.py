@@ -33,8 +33,8 @@ class WaitShellConnect(Test):
             else:
                 self.dut.execute_command("factory_mode_set --mode 4",5000)
                 self.dut.execute_command("reboot",3000)
-                time.sleep(2)
-                r,text_ = self.dut.execute_command("connect",10000)
+                time.sleep(5)
+                r,text_ = self.dut.execute_command("connect",self.timeout)
                 if r == 0:
                     self.logger.info("CSVFILE connect" + " 0 0 pass")
                 else:

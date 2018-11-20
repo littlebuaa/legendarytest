@@ -10,11 +10,11 @@ class MotorCalibration(Test):
         if ENCODING == 1 or ENCODING == 2:
             # Language setting
             self.message = (
-                "馬達校準測試，按Enter繼續"
+                "馬達校準測試，按Enter繼續",
             )
         else:
             self.message = (
-                "Motor Calibration, Press ENTER to begin: pay attention to hold the motor"
+                "Motor Calibration, Press ENTER to begin: pay attention to hold the motor",
             )
 
     def test(self):

@@ -9,16 +9,19 @@ from framework.tools import logger as logtool
 
 
 def main():
-    """Define code in main to avoid execution if it is imported."""
+
     ######################  init test       ######################
     time_begin = TOOL.init_test()
     test_result = True
+
     ######################  scan MAC address    ######################
     mac_scan = TOOL.scan_mac("Please scan the MAC label:")
+
 
     ######################  create log handler  ######################
     log_file_name = logtool.log_name_gen("txt", mac_scan)
     logtool.init_logger(log_file_name)
+
 
     ######################  ready to power on   ######################
     print("Power on the device under test, then press ENTER to continue...")
