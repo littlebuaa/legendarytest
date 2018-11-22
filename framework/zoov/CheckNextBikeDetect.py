@@ -9,8 +9,8 @@ class CheckNextBikeDetect(Test):
             # Language setting
             self.message = (
             "有車來泊功能檢測",
-            "正常狀態，車後方左右兩個觸點連結斷開，按Enter鍵繼續",
-            "按下開關，短接單車後兩側的觸點，按Enter鍵繼續 ",
+            "正常狀態，單車後輪左右兩個觸點連結斷開，按Enter鍵繼續", # 此行不會顯示
+            "連結單車後輪兩側的磁鐵觸點，按Enter鍵繼續 ",
             "測試結束，按Enter下一項。。。"
         )
         else:
@@ -29,8 +29,6 @@ class CheckNextBikeDetect(Test):
 
 
         # Switch OFF,
-        op_messager(message[1])
-        input()
         res = CommandResult.parse(self.dut.execute_command("stack_nb_check", 5000)[1])
         if res.rc == 0 and res.data["value"] == "1":
             self.logger.info( "CSVFILE stack_check_next_bike ok ok pass")

@@ -9,7 +9,7 @@ class CheckBrake(Test):
         if ENCODING == 1 or ENCODING == 2:
             # Language setting
             self.message = (
-                "煞車檢測，準備好後按Enter鍵繼續",
+                "------------------------- \n煞車Brake檢測，準備好後按Enter鍵繼續\n----------------------------",
                 "請捏緊左邊的前煞，同時按Enter鍵",
                 "請捏緊右邊的後煞，同時按Enter鍵",
                 "測試結束，下一項。。。"

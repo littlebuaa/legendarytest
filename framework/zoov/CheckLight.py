@@ -28,10 +28,10 @@ class CheckLight(Test):
         flag = False
         message = self.message
         colorprint(message[0],"YELLOW")
-        op_messager(message[1])
         input()
         # Turn on light 
         res = CommandResult.parse(self.dut.execute_command("frontlight on", 4000)[1])
+        op_messager(message[1])
         if res.rc == 0:
             reponse = question_timeout(message[2],60)
             if reponse[0] and (reponse[1].strip().lower()[0] == "y"):

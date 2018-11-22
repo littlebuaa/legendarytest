@@ -9,9 +9,9 @@ class CheckStackDetect(Test):
         if ENCODING == 1 or ENCODING == 2:
             # Language setting
             self.message = (
-            "停車入樁測試",
-            "按下開關，短接單車右側兩個電磁鐵金屬觸點，按Enter鍵繼續 ",
-            "打開開關，測試結束，按Enter下一項。。。"
+            "停車測試",
+            "短接單車右側兩個電磁鐵金屬觸點，按Enter鍵繼續 ",
+            "測試結束，按Enter下一項。。。"
         )
         else:
             self.message = (

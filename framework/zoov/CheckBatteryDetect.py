@@ -12,7 +12,7 @@ class CheckBatteryDetect(Test):
 
     def test(self):
         if ENCODING == 1 or ENCODING == 2:
-            op_messager("動力電池檢測，請將動力電池裝在車上，或者啟動36V電源，然後按Enter鍵")
+            op_messager("動力電池檢測，按Enter鍵繼續 >>> ")
         else:
             op_messager("Battery Detect Test, please put the personal battery on the holder, or Turn on 36V power supply, Then press ENTER...")
         flag = True
