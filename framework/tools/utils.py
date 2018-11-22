@@ -63,7 +63,7 @@ fail_ = """
    2  ===>  Chinese Traditional 繁體中文
 '''
 # global ENCODING
-ENCODING = 0
+ENCODING = 2
 
 
 def init_test():
@@ -77,6 +77,8 @@ def init_test():
     elif "zh_TW" in locale_set or "cp950" in locale_set:
         ENCODING = 2
         print("程式提示語言為繁體中文")
+    else:
+        ENCODING = 0
     return time_begin
 
 
