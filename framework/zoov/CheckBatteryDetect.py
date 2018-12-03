@@ -1,6 +1,6 @@
 from framework.common.testing import Test
 from framework.tools.device import CommandResult
-from framework.tools.utils import colorprint, question_timeout, op_messager, ENCODING
+from framework.tools.utils import colorprint, question_timeout, op_messager, get_encoding
 import os
 import locale
 
@@ -11,6 +11,7 @@ class CheckBatteryDetect(Test):
         super().__init__(dut, "Check Battery Detect")
 
     def test(self):
+        ENCODING = get_encoding()
         if ENCODING == 1 or ENCODING == 2:
             op_messager("動力電池檢測，按Enter鍵繼續 >>> ")
         else:

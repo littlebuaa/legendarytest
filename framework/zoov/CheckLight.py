@@ -1,11 +1,12 @@
 from framework.common.testing import Test
 from framework.tools.device import CommandResult
-from framework.tools.utils import colorprint,question_timeout,ENCODING, op_messager
+from framework.tools.utils import colorprint,question_timeout, get_encoding, op_messager
 import locale
 
 class CheckLight(Test):
     def __init__(self, dut):
         super().__init__(dut, "Check Front and Rear light")
+        ENCODING = get_encoding()
         if ENCODING == 1 or ENCODING == 2:
             # Language setting
             self.message = (

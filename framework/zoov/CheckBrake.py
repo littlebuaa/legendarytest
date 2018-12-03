@@ -1,11 +1,12 @@
 from framework.common.testing import Test
 from framework.tools.device import CommandResult
-from framework.tools.utils import colorprint, op_messager, ENCODING
+from framework.tools.utils import colorprint, op_messager, get_encoding
 import locale,os
 
 class CheckBrake(Test):
     def __init__(self, dut):
         super().__init__(dut, "Check Brake Detect")
+        ENCODING =get_encoding()
         if ENCODING == 1 or ENCODING == 2:
             # Language setting
             self.message = (

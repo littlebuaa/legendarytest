@@ -1,11 +1,12 @@
 from framework.common.testing import Test
 from framework.tools.device import CommandResult
-from framework.tools.utils import colorprint,question_timeout, op_messager, ENCODING
+from framework.tools.utils import colorprint,question_timeout, op_messager, get_encoding
 import locale
 
 class CheckElectromagnet(Test):
     def __init__(self, dut):
-        super().__init__(dut, "Chec Electromagnet")  
+        super().__init__(dut, "Chec Electromagnet")
+        ENCODING = get_encoding()
         if ENCODING == 1 or ENCODING == 2:
             # Language setting
             self.message = (
