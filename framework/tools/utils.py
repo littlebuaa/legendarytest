@@ -81,6 +81,8 @@ def init_test():
         ENCODING = 0
     return time_begin
 
+def get_encoding():
+    return ENCODING
 
 def colorprint(text,back_color="RED",fore_color="WHITE"):
     f_fore = Fore.__dict__[fore_color]
