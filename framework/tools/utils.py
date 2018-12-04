@@ -10,6 +10,7 @@ import sys
 import logging
 from .config import configget
 import locale
+from .msg import error_box, warning_box, MessageWindow
 
 pass_art = """
  .----------------.  .----------------.  .----------------.  .----------------. 
@@ -91,8 +92,14 @@ def colorprint(text,back_color="RED",fore_color="WHITE"):
     print(f_fore + f_back + Style.BRIGHT + text)
     print(Fore.RESET + Back.RESET + Style.RESET_ALL)
 
-    
+def question_box(question):
+    '''
+    Pop-up a yes-no question,return True or False depending keyboard action
+    '''
+    return MessageWindow().get_yesno(question)
+
 def question_timeout(question,timeout_sec):
+
     import msvcrt
     '''#input:
     - question: target question to ask
@@ -146,19 +153,14 @@ def scan_mac(msg):
         return(check_mac_valid(mac_input))
 
 def scan_serial_id(msg):
-    #scan mac from mac label
     timeout = 180
-    colorprint(msg)
-    no_timeout,mac_input = question_timeout("",timeout)#timeout 180 seconds if no input
+    mac_input = MessageWindow().get_entry(msg)
+
     p = re.compile('(?P<serial_id>1[0-9]{5})')
     m = p.search(mac_input)
     print(m)
     serial_id = m.group('serial_id') if m != None else -1
-    if not no_timeout:
-        mac_label = "mac_none" # default value for bad input
-        return(mac_label)
-    else:
-        return(serial_id)
+    return(serial_id)
 
 
 def check_mac_valid(mac_input):
@@ -180,8 +182,8 @@ def show_result(result):
     if result:
         colorprint(pass_, "GREEN")
     else:
-
         colorprint(fail_art, "RED")
+    MessageWindow().show_result(result)
 
 def compare_value(item,target,minvalue,maxvalue):
     ''' return 0 if 	 : minvalue <= target <= maxvalue
@@ -228,3 +230,4 @@ def op_messager(message, color="CYAN", type = 0):
     print()
     colorprint(msg[0:-1],"BLACK",color)
     print('{:#<80}'.format(''))
+    MessageWindow().get_label(message)
