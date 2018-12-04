@@ -16,7 +16,7 @@ class CheckStackDetect(Test):
         else:
             self.message = (
             "Ready to do the STACK DETECT test? Go!",
-            "Now turn on the switch, Bike is in stack!!!",
+            "Connect (short-circuit) the 2 stack point at right side of Bike",
             "Turn off the switch, Test finished, Press ENTER...",
         )
 
@@ -46,5 +46,4 @@ class CheckStackDetect(Test):
             flag = False
 
         colorprint(message[2],"GREEN")
-        input()
         return flag

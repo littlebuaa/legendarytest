@@ -19,7 +19,7 @@ class CheckPowerLED(Test):
             self.message = (
             "Ready to do the POWER LED check test? Go!!",
             "check the RED POWER LED is on or off!",
-            "Did you see the POWER LED on? Yes/No?",
+            "is POWER LED on? Yes/No?",
             "Test finished, Next...",
         )
 

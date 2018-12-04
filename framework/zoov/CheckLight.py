@@ -18,8 +18,8 @@ class CheckLight(Test):
         else:
             self.message = (
             "Ready to do the Light check test? Go!",
-            "Measure the voltage of Front and Rear light, or check the light is on or off!",
-            "Is the Front and Rear Light is ON?? Yes/No?",
+            "Check Light",
+            "Are both the Front and Rear Light ON?? Yes/No?",
             "Turn off the switch, Test finished, Press ENTER...",
         )
 
@@ -28,11 +28,10 @@ class CheckLight(Test):
         
         flag = False
         message = self.message
-        colorprint(message[0],"YELLOW")
-        input()
+        op_messager(message[1])
         # Turn on light 
         res = CommandResult.parse(self.dut.execute_command("frontlight on", 4000)[1])
-        op_messager(message[1])
+        # op_messager(message[1])
         if res.rc == 0:
             if question_box(message[2]):
                 self.logger.info( "CSVFILE check_light ok ok pass")

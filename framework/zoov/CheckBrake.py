@@ -18,8 +18,8 @@ class CheckBrake(Test):
         else:
             self.message = (
                 "Ready to do the Brake DETECT test? Go!",
-                "Apply Only the Left Brake, and at the same time, press ENTER...",
-                "Apply Only the Left Brake, and at the same time, Press ENTER!!!",
+                "Apply only Left Brake, and press ENTER",
+                "Apply only Right Brake, and Press ENTER",
                 "Test finished, please remove the battery, Then press ENTER..."
             )
 
@@ -57,7 +57,6 @@ class CheckBrake(Test):
         else:
             self.logger.info( "CSVFILE right_brake_on ok ng fail")
             flag = False
-
 
         colorprint(message[3],"GREEN")
         return flag

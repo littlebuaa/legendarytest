@@ -18,8 +18,8 @@ class CheckNextBikeDetect(Test):
             self.message = (
             "Ready to do the NEXT Bike DETECT test? Go!",
             "First make sure switch is off, No new bike",
-            "Now turn on the switch, Next bike is in stack stack!!!",
-            "Turn off the switch, Test finished, Press ENTER...",
+            "Connect (short-circuit) the 2 rear stack point.",
+            "Test finished, Press ENTER...",
         )
 
     def test(self): 
@@ -47,5 +47,4 @@ class CheckNextBikeDetect(Test):
             flag = False
 
         colorprint(message[3],"GREEN")
-        input()
         return flag

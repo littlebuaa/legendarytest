@@ -15,7 +15,7 @@ class CheckBatteryDetect(Test):
         if ENCODING == 1 or ENCODING == 2:
             op_messager("動力電池檢測，按Enter鍵繼續 >>> ")
         else:
-            op_messager("Battery Detect Test, please put the personal battery on the holder, or Turn on 36V power supply, Then press ENTER...")
+            op_messager("Battery Detect, please put the personal battery on the holder, or Turn on 36V power supply, Then press ENTER...")
         flag = True
 
         res = CommandResult.parse(self.dut.execute_command("batt_detect", 5000)[1])
@@ -26,5 +26,4 @@ class CheckBatteryDetect(Test):
             flag = False
 
         colorprint("Test finished, Press ENTER...","GREEN")
-        input()
         return flag

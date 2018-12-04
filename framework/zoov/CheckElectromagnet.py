@@ -19,9 +19,9 @@ class CheckElectromagnet(Test):
         else:
             self.message = (
             "Ready to do the electromagnet check test? Go!",
-            "Check if the Magnet of the stack on the right side works, Then press ENTER...",
+            "Check if Magnet on the right side of bike works, then press ENTER...",
             "Measure the voltage of Electromagnet OUTPUT, Or check the status of the Magnet",
-            "Is voltage around 24V? Does the magnet lose its attraction?? Yes/No?",
+            "Does the magnet lose its attraction???",
             "Test finished, please remove the battery, Then press ENTER..."
         )
 
@@ -34,7 +34,7 @@ class CheckElectromagnet(Test):
         # Turn on electromagnet 
         res = CommandResult.parse(self.dut.execute_command("electromagnet on", 4000)[1])
         if res.rc == 0:
-            op_messager(message[2])
+            # op_messager(message[2])
             if question_box(message[3]):
                 self.logger.info( "CSVFILE check_electromagnet ok ok pass")
                 flag = True
