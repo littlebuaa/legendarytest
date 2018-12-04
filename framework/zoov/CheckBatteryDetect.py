@@ -1,6 +1,6 @@
 from framework.common.testing import Test
 from framework.tools.device import CommandResult
-from framework.tools.utils import colorprint, question_timeout, op_messager, get_encoding
+from framework.tools.utils import colorprint, op_messager, get_encoding
 import os
 import locale
 
@@ -17,7 +17,6 @@ class CheckBatteryDetect(Test):
         else:
             op_messager("Battery Detect Test, please put the personal battery on the holder, or Turn on 36V power supply, Then press ENTER...")
         flag = True
-        input()
 
         res = CommandResult.parse(self.dut.execute_command("batt_detect", 5000)[1])
         if res.rc == 0 and res.data["value"] == "0":

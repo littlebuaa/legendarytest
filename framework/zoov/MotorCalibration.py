@@ -22,7 +22,6 @@ class MotorCalibration(Test):
         '''To run the motor calibration test'''
         message = self.message
         op_messager(message[0])
-        input()
         
         cmd_set = "motor_calibration"
         r,text_ = self.dut.execute_command(cmd_set,70000)

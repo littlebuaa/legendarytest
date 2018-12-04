@@ -1,6 +1,6 @@
 from framework.common.testing import Test
 from framework.tools.device import CommandResult
-from framework.tools.utils import colorprint,question_timeout, get_encoding, op_messager
+from framework.tools.utils import colorprint,question_box, get_encoding, op_messager
 import time
 import locale,os
 
@@ -29,16 +29,13 @@ class CheckSound(Test):
         message = self.message
         colorprint(message[0],"YELLOW")
         op_messager(message[1])
-        input()
-
         rc, text = self.dut.execute_command("play_sound", 10000)
         if rc == 0:
-            reponse = question_timeout(message[2],40)
-            if reponse[0] and (reponse[1].strip().lower() == "y"):
-                self.logger.info( "CSVFILE play_sound ok ok pass")
-                flag = True
+            flag = question_box(message[2])
+        if flag:
+            self.logger.info( "CSVFILE play_sound ok ok pass")
+        else:
+            self.logger.info( "CSVFILE play_sound ok fail fail")
 
-        self.logger.info( "CSVFILE play_sound ok fail fail")
         colorprint(message[3],"GREEN")
-        
         return flag

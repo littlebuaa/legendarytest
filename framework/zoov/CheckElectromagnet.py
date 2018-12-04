@@ -1,6 +1,6 @@
 from framework.common.testing import Test
 from framework.tools.device import CommandResult
-from framework.tools.utils import colorprint,question_timeout, op_messager, get_encoding
+from framework.tools.utils import colorprint,question_box, op_messager, get_encoding
 import locale
 
 class CheckElectromagnet(Test):
@@ -31,13 +31,11 @@ class CheckElectromagnet(Test):
         message = self.message
         colorprint(message[0],"YELLOW")
         op_messager(message[1])
-        input()
         # Turn on electromagnet 
         res = CommandResult.parse(self.dut.execute_command("electromagnet on", 4000)[1])
         if res.rc == 0:
             op_messager(message[2])
-            reponse = question_timeout(message[3],timeout)
-            if reponse[0] and (reponse[1].strip().lower()[0] == "y"):
+            if question_box(message[3]):
                 self.logger.info( "CSVFILE check_electromagnet ok ok pass")
                 flag = True
 

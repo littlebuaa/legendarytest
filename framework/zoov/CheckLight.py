@@ -1,6 +1,6 @@
 from framework.common.testing import Test
 from framework.tools.device import CommandResult
-from framework.tools.utils import colorprint,question_timeout, get_encoding, op_messager
+from framework.tools.utils import colorprint,question_box, get_encoding, op_messager
 import locale
 
 class CheckLight(Test):
@@ -34,8 +34,7 @@ class CheckLight(Test):
         res = CommandResult.parse(self.dut.execute_command("frontlight on", 4000)[1])
         op_messager(message[1])
         if res.rc == 0:
-            reponse = question_timeout(message[2],60)
-            if reponse[0] and (reponse[1].strip().lower()[0] == "y"):
+            if question_box(message[2]):
                 self.logger.info( "CSVFILE check_light ok ok pass")
                 flag = True
 

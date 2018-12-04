@@ -1,6 +1,6 @@
 from framework.common.testing import Test
 from framework.tools.device import CommandResult
-from framework.tools.utils import colorprint,question_timeout, get_encoding, op_messager
+from framework.tools.utils import colorprint,question_box, get_encoding, op_messager
 import locale
 
 class CheckLowPowerLink(Test):
@@ -36,12 +36,9 @@ class CheckLowPowerLink(Test):
         res = CommandResult.parse(self.dut.execute_command("low_power_check on", 4000)[1])
         if res.rc == 0:
             op_messager(message[1])
-            input()
-            reponse = question_timeout(message[2], 60)
-            if reponse[0] and (reponse[1].strip().lower()[0] == "y"):
+            if question_box(message[2]):
                 self.dut.execute_command("low_power_check off", 4000)
-                reponse = question_timeout(message[3],60)
-                if reponse[0] and (reponse[1].strip().lower()[0] == "y"):
+                if question_box(message[3]):
                     self.logger.info( "CSVFILE check_low_power_link ok ok pass")
                     flag = True
 

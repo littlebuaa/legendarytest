@@ -37,7 +37,6 @@ class CheckStackDetect(Test):
 
         # Switch ON
         op_messager(message[1])
-        input()
 
         res = CommandResult.parse(self.dut.execute_command("stack_check", 5000)[1])
         if res.rc == 0 and res.data["in_stack"] == "1":

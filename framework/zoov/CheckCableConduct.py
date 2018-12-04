@@ -1,6 +1,6 @@
 from framework.common.testing import Test
 from framework.tools.device import CommandResult
-from framework.tools.utils import colorprint,question_timeout
+from framework.tools.utils import colorprint,question_box
 import os
 import locale
 
@@ -22,9 +22,7 @@ class CheckCableConduct(Test):
         input()
 
         msg = "Is all Right, Did you hear all the DiDi?? Yes/No? " 
-        reponse = question_timeout(msg,10)
-        print(reponse)
-        if reponse[0] and (reponse[1].strip().lower() == "y"):
+        if question_box(msg):
             self.logger.info( "CSVFILE cable_soudering ok ok pass")
             return True
         self.logger.info( "CSVFILE cable_soldering ok fail fail")

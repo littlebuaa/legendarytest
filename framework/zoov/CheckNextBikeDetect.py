@@ -38,7 +38,6 @@ class CheckNextBikeDetect(Test):
             flag = False
         
         op_messager(message[2])
-        input()
         # Switch ON, 
         res = CommandResult.parse(self.dut.execute_command("stack_nb_check", 5000)[1])
         if res.rc == 0 and res.data["value"] == "0":

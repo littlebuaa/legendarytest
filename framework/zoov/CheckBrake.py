@@ -41,7 +41,6 @@ class CheckBrake(Test):
         
         # Left Brake ON,
         op_messager(message[1])
-        input()
         res = CommandResult.parse(self.dut.execute_command("brake_check", 5000)[1])
         if res.rc == 0 and res.data["left_brake"] == "1" and res.data["right_brake"] == "0":
             self.logger.info( "CSVFILE left_brake_on ok ok pass")
@@ -52,8 +51,6 @@ class CheckBrake(Test):
 
         # Right Brake ON, 
         op_messager(message[2])
-        input()
-
         res = CommandResult.parse(self.dut.execute_command("brake_check", 5000)[1])
         if res.rc == 0 and res.data["left_brake"] == "0" and res.data["right_brake"] == "1":
             self.logger.info( "CSVFILE right_brake_on ok ok pass")
