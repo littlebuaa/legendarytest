@@ -29,7 +29,7 @@ class MessageWindow():
         wFrame = tk.Frame(self.root, background="black", padx=20, pady=20)  #background="light yellow"
         wFrame.pack()
         ###################
-        wLabel = tk.Label(wFrame, background="cyan", text = label,font=("Helvetica",20),justify = "left",wraplength = 1000) #background = "yellow"
+        wLabel = tk.Label(wFrame, background="cyan", text = label,font=("Helvetica",20),justify = "left",wraplength = 600) #background = "yellow"
         wLabel.pack(side = "top",pady=10,fill = "x")
         wEntryBox = tk.Entry(wFrame, background="white", width=60,font=("Helvetica",20))
         wEntryBox.focus_force()
@@ -53,10 +53,11 @@ class MessageWindow():
         ##########################
     
     def lableBox(self,label):
+        # self.root.geometry("800x400+100+300")
         wFrame = tk.Frame(self.root, background="black", padx=20, pady=20)  #background="light yellow"
-        wFrame.pack()
+        wFrame.pack(fill = "x")
         ###################
-        wLabel = tk.Label(wFrame, pady=10, padx=10, background="cyan", text = label,font=("Helvetica",30),justify = "left",wraplength = 800) #background = "yellow"
+        wLabel = tk.Label(wFrame, pady=10, padx=10, background="cyan", text = label,font=("Helvetica",30),justify = "left",wraplength = 600) #background = "yellow"
         wLabel.pack(side = "top",pady=10,fill = "x")
         ####################################
         def fin():
@@ -79,7 +80,7 @@ class MessageWindow():
     def yesnoBox(self,label):
         self.root.focus_force()
         wFrame = tk.Frame(self.root, background="black", padx=20, pady=20)
-        wFrame.pack()
+        wFrame.pack(fill = "x")
         ###################
         wLabel = tk.Label(wFrame, pady=10,background="cyan",text = label,font=("Helvetica",20),justify = "center",wraplength = 1000)
         wLabel.pack(side = "top", fill = "x",pady=10)
