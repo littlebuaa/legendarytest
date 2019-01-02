@@ -69,7 +69,7 @@ ENCODING = 2
 
 def init_test():
     global ENCODING
-    colorama_init()
+    colorama_init(autoreset = True)
     time_begin = time.time()
     locale_set = locale.getdefaultlocale()
     if "zh_CN" in locale_set:
@@ -85,12 +85,17 @@ def init_test():
 def get_encoding():
     return ENCODING
 
+def colortext(text,back_color="RED",fore_color="WHITE",style = "BRIGHT"):
+    f_fore = Fore.__dict__[fore_color]
+    f_back = Back.__dict__[back_color]
+    f_style= Style.__dict__[style]
+    text = f_fore + f_back + f_style + text + Style.RESET_ALL
+    return text
+
 def colorprint(text,back_color="RED",fore_color="WHITE"):
     f_fore = Fore.__dict__[fore_color]
     f_back = Back.__dict__[back_color]
-
     print(f_fore + f_back + Style.BRIGHT + text)
-    print(Fore.RESET + Back.RESET + Style.RESET_ALL)
 
 def question_box(question):
     '''
@@ -178,12 +183,13 @@ def flush_input():
         import sys, termios
         termios.tcflush(sys.stdin, termios.TCIOFLUSH)
 
-def show_result(result):
+def show_result(result, pop= True):
     if result:
         colorprint(pass_, "GREEN")
     else:
         colorprint(fail_art, "RED")
-    MessageWindow().show_result(result)
+    if pop:
+        MessageWindow().show_result(result)
 
 def compare_value(item,target,minvalue,maxvalue):
     ''' return 0 if 	 : minvalue <= target <= maxvalue
