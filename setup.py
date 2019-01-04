@@ -10,10 +10,12 @@ import subprocess
 
 # read version info
 here = os.path.abspath(os.path.dirname(__file__))
-about = {}
-with open(os.path.join(here, 'framework', '__version__.py')) as f:
-    exec(f.read(), about)
+# about = {}
+# with open(os.path.join(here, 'framework', '__version__.py')) as f:
+    # exec(f.read(), about)
+
 project_name = "legendarytest"
+project_version = subprocess.check_output(["git", "tag", '-l'],encoding='utf-8').strip().split('\n')[-1]
 
 class CleanCommand(Command):
     """Custom clean command to tidy up the project root."""
@@ -37,8 +39,10 @@ def call(msg, commands, error_msg, exit_on_fail=False):
         if exit_on_fail:
             sys.exit()
 
-setup(name='legendarytest',
-      version=about['__version__'],
+
+setup(name= project_name,
+      #version=about['__version__'],
+      version = project_version
       license='MIT',
       author='Tuo LI',
       author_email='tuo.de.li@gmail.com',
