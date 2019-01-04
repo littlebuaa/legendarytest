@@ -7,6 +7,29 @@ from framework.tools.config import configget
 from framework.tools import logger as logtool
 
 
+def print_test_summary(oklist, nglist):
+    ''' list all the result of test items'''
+    print('\n\n')
+    print('{:#^80}\n'.format("   Summary   "))
+    for item in oklist:
+        if item.__class__.__name__ == "ExecuteCommand":
+            name = TOOL.colortext(item.command, "RED")
+        else:
+            name = TOOL.colortext(item.__class__.__name__, "GREEN")
+        res = TOOL.colortext('PASS', "GREEN")
+        txtprint = "{:50}:\t{}".format(name,res)
+        print(txtprint)
+    print('{:<80}'.format("---------------------------------"))
+    for item in nglist:
+        if item.__class__.__name__ == "ExecuteCommand":
+            name = TOOL.colortext(item.command, "RED")
+        else:
+            name = TOOL.colortext(item.__class__.__name__, "RED")
+        res = TOOL.colortext('FAIL', "RED")
+        txtprint = "{:50}:\t{}".format(name,res)
+        print(txtprint)
+    print('\n')
+    print('{:#^80}\n'.format("   End of Summary   "))
 
 def main():
 
